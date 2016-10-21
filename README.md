@@ -27,7 +27,7 @@ DBPASS=placeholder
 You would obviously use your own server's database configuration here.
 
 ### Analytics database
-This is a piece that I needed for my requirements. You can disable this by taking out the logger on the build method.
+This is a piece that I needed for my requirements. You can disable this by taking out the logger on the build method. As of 1.1 you can choose to have this turned off by passing `false` when you call the build method. 
 
 Included you will find the structure of the database I used. I will trust you to set up what you need.
 

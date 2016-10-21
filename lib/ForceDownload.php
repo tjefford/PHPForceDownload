@@ -4,7 +4,7 @@
  * track file downloads and log errors.
  *
  * @author     Tyler Jefford <http://tylerjefford.com>
- * @version    Release: 1.0
+ * @version    Release: 1.1
  */
 
 
@@ -58,7 +58,7 @@ class ForceDownload {
    * @var string Post ID from URL Params
    * @return file download
    */
-  function build($file, $post)
+  function build($file, $post, $save = true)
   {
     @ob_end_clean();
     if(ini_get('zlib.output_compression'))
@@ -68,7 +68,9 @@ class ForceDownload {
     header("Content-Transfer-Encoding: binary");
     header('Accept-Ranges: bytes');
 
-    $this->log($post);
+    if($save){
+      $this->log($post);
+    }
   }
 
   /**

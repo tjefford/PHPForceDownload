@@ -24,7 +24,7 @@ if($postid && is_numeric($postid)) {
   // Is link set and in the approved list?
   if($link && $download->approved($link, $whitelist)){
     // Force the download of the file! (good job)
-    $download->build($mp3, $postid);
+    $download->build($mp3, $postid, true);
   } else {
     // Link was not approved or non-existent. bummer.
     // Log error in /var/tmp/downloads_error.log
